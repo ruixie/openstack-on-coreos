@@ -14,13 +14,12 @@ rpc_backend = rabbit
 my_ip = MYIPADDR
 
 [database]
-connection = mysql://root:openstack@192.168.100.9:33306/cinder
+connection = mysql://cinder:CINDER_DBPASS@controller/cinder
 
 [oslo_messaging_rabbit]
-rabbit_host = 192.168.100.9 
-rabbit_port = 35672
-rabbit_userid = guest
-rabbit_password = openstack
+rabbit_host = controller 
+rabbit_userid = openstack 
+rabbit_password = RABBIT_PASS
 
 [oslo_concurrency]
 lock_path = /var/lock/cinder
